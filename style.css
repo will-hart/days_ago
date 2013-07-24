@@ -74,6 +74,7 @@ input.error, #input-errors {
     display: table;
     margin: 0;
     padding: 0;
+    z-index: 3;
 }
 
 .grid-wrapper {
@@ -96,20 +97,23 @@ input.error, #input-errors {
 .grid-date {
     font-weight: bolder;
     color: white;
-    font-size: 1.5em;
+    font-size: 3em;
     margin-bottom: 10px;
 }
 
 .grid-title {
     font-style: italic;
-    color: #DDD;
+    color: white;
     font-size: 1.1em;
     margin-top: 0;
 }
 
 .unknown {
     padding: 1em 0.5em;
+    cursor:no-drop;
 }
+
+.unknown .grid-wrapper { text-align: left; }
 
 /* layouts */
 .single {
@@ -130,7 +134,7 @@ input.error, #input-errors {
 .single-one-of-more {
     right: 40%;
     bottom: 20%;
-	height: 70%;
+    height: 70%;
     width: 60%;
 }
 
@@ -140,7 +144,7 @@ input.error, #input-errors {
     bottom: 0;
     right: 0;
     left: 60%;
-	height: 50%;
+    height: 50%;
     width: 40%;
 }
 
@@ -154,35 +158,36 @@ input.error, #input-errors {
 
 .right-row-second-of-more {
     bottom: 35%;
-	height: 35%;
+    height: 35%;
 }
 
 .right-row-third-of-more {
     top: 35%;
     bottom: 70%;
-	height: 35%;
+    height: 35%;
 }
 
 .bottom-row {
-	position: fixed;
+    position: fixed;
     width: 20%;
     top: 69%;
-	left: 0;
-	height: 31%;
+    left: 0;
+    height: 31%;
+    z-index: 1;
 }
 
 .bottom-row-two {
-	left: 20%;
+    left: 20%;
 }
 
 .bottom-row-three {
-	left: 40%;
+    left: 40%;
 }
 
 .bottom-row-four {
-	left: 60%;
+    left: 60%;
 }
 
 .bottom-row-five {
-	left: 80%;
+    left: 80%;
 }

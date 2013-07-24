@@ -1,17 +1,4 @@
-var tasks = {
-                data: [
-                    { title: "A test #1", due_date: moment("2013-08-01", "YYYY-MM-DD"), done: false },  
-                    { title: "A test #2", due_date: moment("2013-08-15", "YYYY-MM-DD"), done: false }, 
-                    { title: "A test #4", due_date: moment("2013-07-06", "YYYY-MM-DD"), done: true }, 
-                    { title: "A test #5", due_date: moment("2013-12-07", "YYYY-MM-DD"), done: false }, 
-                    { title: "A test #6", due_date: moment("2013-07-05", "YYYY-MM-DD"), done: true }, 
-                    { title: "A test #6", due_date: moment("2014-07-04", "YYYY-MM-DD"), done: false }, 
-                    { title: "A test #6", due_date: moment("2013-07-03", "YYYY-MM-DD"), done: false }, 
-                    { title: "A test #6", due_date: moment("2013-09-02", "YYYY-MM-DD"), done: false }, 
-                    { title: "A test #6", due_date: moment("2014-07-01", "YYYY-MM-DD"), done: false }
-                ]
-            },
-    
+var tasks = { data: [] },
     class_vals = {
         "1": {
             "1": "grid-item single",
@@ -88,6 +75,7 @@ function get_grid_class(grid_item, num_items, item_index)
     
     return base_class;
 }
+
 /**
  * Draws a grid from a list of objects
  */
@@ -98,7 +86,7 @@ function draw_grid(data, element, draw_grid) {
         current_colour = start_colour;
     
     // clear the element
-    element.innerHTML = "";
+    element.html("");
     
     // get the incomplete objects
     for (var i = 0; i < data.length; ++i) 
@@ -110,7 +98,7 @@ function draw_grid(data, element, draw_grid) {
     }
     
     num_items = not_done.length;
-    
+        
     not_done.sort(
         function(a,b) {
             return a.due_date > b.due_date;
@@ -120,8 +108,8 @@ function draw_grid(data, element, draw_grid) {
     // now draw!
     for (var i = 0; i < num_items; ++i) 
     {
-        var elem = document.createElement("div");
-        var classNames = null;
+        var elem = $("<div>");
+        var classNames = "";
         
         if (draw_grid) {
             classNames = get_grid_class(not_done[i], num_items, i + 1);
@@ -131,16 +119,20 @@ function draw_grid(data, element, draw_grid) {
         
         
         // set up the styles
-        elem.setAttribute("class", classNames);
-        elem.innerHTML = get_inner_grid_html(not_done[i]);
-        elem.style.backgroundColor = current_colour; 
+        elem.attr("class", classNames);
+        elem.html(get_inner_grid_html(not_done[i]));
+        elem.data('index', i);
+        elem.css("backgroundColor", current_colour);
         
         // get the next colour
-        current_colour = ColorLuminance(current_colour, -0.08);
+        current_colour = ColorLuminance(current_colour, -0.1);
         
         // append the new element
-        element.appendChild(elem);
+        element.append(elem);
     }
+    
+    // save the open tasks
+    tasks.data = not_done;
 }
 
 /** 
@@ -185,7 +177,7 @@ function parse_task(task_string) {
         && date_parts[1] != "minutes" && date_parts[1] != "minute"
         && date_parts[1] != "seconds" && date_parts[1] != "second") 
     {
-        parse_error = "The date type must be one of 'year', 'month', 'day', 'hour', 'minute' or 'second'";
+        parse_error = "The date type must be one of 'year', 'month', 'day', 'hour', 'minute' or 'second' with no trailing punctuation";
         return false;
     }
     
@@ -214,27 +206,6 @@ function parse_task(task_string) {
     // all done :)
     return true;
 }
-
-/** 
- * found at http://www.sitepoint.com/javascript-generate-lighter-darker-color/
- */
-function ColorLuminance(hex, lum) {
-	// validate hex string
-	hex = String(hex).replace(/[^0-9a-f]/gi, '');
-	if (hex.length < 6) {
-		hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
-	}
-	lum = lum || 0;
-	// convert to decimal and change luminosity
-	var rgb = "#", c, i;
-	for (i = 0; i < 3; i++) {
-		c = parseInt(hex.substr(i*2,2), 16);
-		c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
-		rgb += ("00"+c).substr(c.length);
-	}
-	return rgb;
-}
-
 
 /**
  * Saves tasks to the database
@@ -283,12 +254,12 @@ function load_tasks() {
  * Draws the grid, or a flat list if we are in the manage view 
  */
 function trigger_draw_grid() {
-    var elem = document.getElementById("main-container"),
+    var elem = $("#main-container"),
         proper_classes = true;
     
     // handle the flat list in the manage page
-    if (elem === undefined || elem === null) {
-        elem = document.getElementById("list-container");
+    if (elem.length === 0) {
+        elem = $("#list-container");
         proper_classes = false;
     }
     
@@ -332,6 +303,26 @@ function rgb2hex(rgb) {
 }
 
 /** 
+ * found at http://www.sitepoint.com/javascript-generate-lighter-darker-color/
+ */
+function ColorLuminance(hex, lum) {
+	// validate hex string
+	hex = String(hex).replace(/[^0-9a-f]/gi, '');
+	if (hex.length < 6) {
+		hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+	}
+	lum = lum || 0;
+	// convert to decimal and change luminosity
+	var rgb = "#", c, i;
+	for (i = 0; i < 3; i++) {
+		c = parseInt(hex.substr(i*2,2), 16);
+		c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+		rgb += ("00"+c).substr(c.length);
+	}
+	return rgb;
+}
+
+/** 
  * fire it up
  */
 $(document).ready( function() {
@@ -359,6 +350,15 @@ $(document).ready( function() {
         
         var new_colour = rgb2hex($(this).css("backgroundColor"));
         set_swatch_colour(new_colour);
+    });
+    
+    // handle clicking of "unknown" elements in the list view to cancel them
+    $("#list-container").on('click', '.unknown', function(e) {
+        e.preventDefault();
+        var id = $(this).data('index');
+        
+        tasks.data[id].done = true;
+        save_tasks(tasks);
     });
     
     // get the swatch colour
