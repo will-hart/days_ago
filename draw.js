@@ -43,7 +43,11 @@ var tasks = {
             "9": "hidden",
         },
     },
-    start_colour = "F5038C";
+    start_pink = "F5038C", 
+    start_blue = "447BD4", 
+    start_green = "37DE6A", 
+    start_yellow = "D8BE36",
+    parse_error = "";
     
 function constrain_value(val_to_constrain)
 {
@@ -94,7 +98,7 @@ function draw_grid(data, element, draw_grid) {
     // load in initial test data
     var not_done = [],
         num_items = 0,
-        current_colour = start_colour;
+        current_colour = start_blue;
     
     // clear the element
     element.innerHTML = "";
@@ -161,10 +165,33 @@ function parse_task(task_string) {
         date_parts = parts.pop().split(" "),
         task_name = "",
         task_date = moment();
+        
+    parse_error = "";
     
+    // check for enough arguments
     if (! parts.length >= 2) {
+        parse_error = "Three items required - e.g. Do a task in 3 days";
         return false;
     }
+    
+    // check the first date part is a number
+    if (! $.isNumeric(date_parts[0])) {
+        parse_error = "Numeric time needed - e.g. '3 days'";
+        return false;
+    }
+    
+    // check we have a correctly formatted delta string
+    if (date_parts[1] != "years" && date_parts[1] != "year"
+        && date_parts[1] != "months" && date_parts[1] != "month"
+        && date_parts[1] != "days" && date_parts[1] != "day"
+        && date_parts[1] != "hours" && date_parts[1] != "hour"
+        && date_parts[1] != "minutes" && date_parts[1] != "minute"
+        && date_parts[1] != "seconds" && date_parts[1] != "second") 
+    {
+        parse_error = "The date type must be one of 'year', 'month', 'day', 'hour', 'minute' or 'second'";
+        return false;
+    }
+    
     
     // rebuild the task name inserting " in " where it has been removed
     for (var i = 0; i < parts.length; ++i) {
@@ -261,11 +288,15 @@ function trigger_draw_grid() {
 $(document).ready( function() {
     // hook up the enter key on the new item box
     $("#new_task").keydown(function (event) {
+        $(this).removeClass("error");
+        
         if (event.which == 13) {
             event.preventDefault();
             if (parse_task($(this).val()))
             {
                 $(this).val("");
+            } else {
+                $(this).addClass("error");
             }
         }
     });

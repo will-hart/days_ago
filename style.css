@@ -1,4 +1,4 @@
-body { background: #303030; }
+body { background: #141414; }
 
 /* admin styles */
 #add-button {
@@ -38,16 +38,14 @@ body { background: #303030; }
     outline: none;
 }
 
+input.error {
+    color: #DF5757;
+}
+
 #list-container {
     width: 70%;
     margin: 2em auto;
 }
-
-/* colour swatches 
-.panic { background: #CD0074; border: 1px solid #CD0074; }
-.errr-hurry-up { background: #992667; border: 1px solid #992667; }
-.all-good-mate { background: #9F3ED5; border: 1px solid #9F3ED5; }
-.worry-about-it-later { background: #AD66D5; border: 1px solid #AD66D5; }*/
 
 
 /* general block styles */
