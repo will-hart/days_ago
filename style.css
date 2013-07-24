@@ -28,7 +28,25 @@ body { background: #141414; }
 
 #form-container h2 {
     color: white;
+    float: left;
 }
+
+#form-container #swatches {
+    float: right;
+}
+
+.swatch {
+    float: right;
+    width: 1em; 
+    height: 1em;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.pink { background: #F5038C; }
+.blue { background: #447BD4; }
+.green { background: #37DE6A; }
+.yellow { background: #D8BE36; }
 
 #form-container input {
     padding: 15px;

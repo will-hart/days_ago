@@ -43,10 +43,7 @@ var tasks = {
             "9": "hidden",
         },
     },
-    start_pink = "F5038C", 
-    start_blue = "447BD4", 
-    start_green = "37DE6A", 
-    start_yellow = "D8BE36",
+    start_colour = "#F5038C",
     parse_error = "";
     
 function constrain_value(val_to_constrain)
@@ -98,7 +95,7 @@ function draw_grid(data, element, draw_grid) {
     // load in initial test data
     var not_done = [],
         num_items = 0,
-        current_colour = start_green;
+        current_colour = start_colour;
     
     // clear the element
     element.innerHTML = "";
@@ -299,11 +296,44 @@ function trigger_draw_grid() {
     draw_grid(tasks.data, elem, proper_classes);
 }
 
+/**
+ * Gets the swatch colour from storage and saves to start_colour
+ */
+function get_swatch_colour() {
+    chrome.storage.sync.get('daysago_swatch', function(item) {
+        start_colour = item.daysago_swatch;
+        trigger_draw_grid()
+    });
+}
+
+/**
+ * Sets the swatch colour and saves it to database 
+ */
+function set_swatch_colour(new_colour) {
+    chrome.storage.sync.set({'daysago_swatch': new_colour}, function() {
+        start_colour = new_colour;
+        trigger_draw_grid();
+    });
+}
+
+/**
+ * converts an rgb value to hex 
+ */
+function rgb2hex(rgb) {
+     if (  rgb.search("rgb") == -1 ) {
+          return rgb;
+     } else {
+          rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+))?\)$/);
+          function hex(x) {
+               return ("0" + parseInt(x).toString(16)).slice(-2);
+          }
+          return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]); 
+     }
+}
 
 /** 
  * fire it up
  */
-
 $(document).ready( function() {
     // hook up the enter key on the new item box
     $("#new_task").keydown(function (event) {
@@ -319,9 +349,19 @@ $(document).ready( function() {
             }
         }
     });
+    
+    // hook up the swatch setting events
+    $(".swatch").on('click', function(e) {
+        e.preventDefault();
+        
+        var new_colour = rgb2hex($(this).css("backgroundColor"));
+        set_swatch_colour(new_colour);
+    });
+    
+    // get the swatch colour
+    get_swatch_colour();
    
     // draw the grid
-    //trigger_draw_grid();
     load_tasks();
 });
 
