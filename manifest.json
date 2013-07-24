@@ -1,0 +1,30 @@
+{
+    "name": "Days Ago",
+    "description": "A simple countdown application",
+    "version": "0.1",
+    "permissions": [
+        "background", 
+        "storage",
+        "tabs" 
+    ],
+    "icons" : {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "offline_enabled": true,
+    "manifest_version": 2,
+    "homepage_url": "http://www.williamhart.info/",
+    "omnibox": { 
+        "keyword" : "daysago" 
+    },
+    "background": { 
+        "persistent": false,
+        "scripts": [ "background.js" ]
+    },
+    "app": {
+      "launch": {
+         "local_path": "index.html"
+      }
+   }
+}

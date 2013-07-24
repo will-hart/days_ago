@@ -1,0 +1,168 @@
+body { background: #303030; }
+
+/* admin styles */
+#add-button {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+
+#add-button a {
+    color: white;
+    text-decoration: none;
+}
+
+#add-button a:hover {
+    text-decoration: underline;
+}
+
+#form-container {
+    width: 60%;
+    min-width: 350px;
+    margin: 4em auto 1em auto;
+}
+
+#form-container h2 {
+    color: white;
+}
+
+#form-container input {
+    padding: 15px;
+    font-size: 1.5em;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+#list-container {
+    width: 70%;
+    margin: 10px auto;
+}
+
+/* colour swatches */
+.panic { background: #CD0074; border: 1px solid #CD0074; }
+.errr-hurry-up { background: #992667; border: 1px solid #992667; }
+.all-good-mate { background: #9F3ED5; border: 1px solid #9F3ED5; }
+.worry-about-it-later { background: #AD66D5; border: 1px solid #AD66D5; }
+
+
+/* general block styles */
+.hidden { display: none; }
+
+.grid-item {
+    display: table;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-inner {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    top: -50%;
+}
+
+.grid-date {
+    font-weight: bolder;
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.grid-title {
+    font-style: italic;
+    color: #DDD;
+    font-size: 1.1em;
+    margin-top: 0;
+}
+
+/* layouts */
+.single {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.single-one-of-three {
+    right: 35%;
+    width: 65%;
+}
+
+.single-one-of-more {
+    right: 35%;
+    bottom: 20%;
+	height: 70%;
+    width: 65%;
+}
+
+.right-row {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 65%;
+	height: 50%;
+    width: 35%;
+}
+
+.right-row-second-of-three {
+    bottom: 50%;
+}
+
+.right-row-third-of-three {
+    top: 50%;
+}
+
+.right-row-second-of-more {
+    bottom: 35%;
+	height: 35%;
+}
+
+.right-row-third-of-more {
+    top: 35%;
+    bottom: 70%;
+	height: 35%;
+}
+
+.bottom-row {
+	position: fixed;
+    width: 20%;
+    top: 70%;
+	left: 0;
+	height: 30%;
+}
+
+.bottom-row-two {
+	left: 20%;
+}
+
+.bottom-row-three {
+	left: 40%;
+}
+
+.bottom-row-four {
+	left: 60%;
+}
+
+.bottom-row-five {
+	left: 80%;
+}
