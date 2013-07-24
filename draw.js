@@ -243,7 +243,19 @@ function ColorLuminance(hex, lum) {
  * Saves tasks to the database
  */
 function save_tasks(tasks) {
-    chrome.storage.sync.set({'daysago-data': tasks}, function() {
+    // transform the data
+    var new_data = [];
+    
+    for (var i = 0; i < tasks.data.length; ++i) {
+        var tmp_task = {
+            title: tasks.data[i].title,
+            due_date: tasks.data[i].due_date.format("YYYY-MM-DD hh:mm:SS"),
+            done: tasks.data[i].done
+        };
+        new_data.push(tmp_task);
+    }
+
+    chrome.storage.sync.set({'daysago': new_data}, function() {
         trigger_draw_grid();
         console.log(chrome.runtime.lastError);
     });
@@ -253,12 +265,17 @@ function save_tasks(tasks) {
  * Loads tasks from local storage and draws the grid when done
  */
 function load_tasks() {
-    chrome.storage.sync.get('daysago-data', function(items) {
-        if (!items.hasOwnProperty("data")) {
-            items.data = [];
+    chrome.storage.sync.get('daysago', function(items) {
+        tasks.data = [];
+        if (items.hasOwnProperty("daysago")) {
+            var loaded_data = items.daysago;
+            
+            for (var i = 0; i < loaded_data.length; ++i) {
+                loaded_data[i].due_date = moment(loaded_data[i].due_date, "YYYY-MM-DD hh:mm:SS");
+                tasks.data.push(loaded_data[i]);
+            }
+            
         }
-        
-        tasks = items;
         trigger_draw_grid();
     });
 }
