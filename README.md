@@ -1,10 +1,16 @@
-Blitz Full Screen URL Launcher
+Days Ago Chrome Extension
 ==================================
 
-This is a very simple, clean extension which places a button in the top right hand corner and allows you to navigate to easily navigate to URLs when Chrome is in full-screen mode. 
+A simple yet beautiful extension for Google Chrome which lets you manage upcoming dates. Simply type in the box on the "manage" screen:
 
-You can bind the extension to a key once installed by navigating to chrome://extensions, scrolling down the bottom and looking for the link "Configure Commands".  When in full screen mode you can then hit "CTRL-Shift-L", type your URL and hit enter.
+    Book plane tickets in 5 days
+    
+A task `Book plane tickets` will be created in five days time.  To mark a task as finished just click it in the "manage" screen.
 
-This plugin works by simply using javascript to redirect the current window to the URL you type.  It doesn't view track your history or your links and there are no analytics trackers attached either.
+Currently if you type `daysago` and hit `tab` in the Chrome omnibox you can hit enter to open the extension.  In future this will 
+allow you to create new tasks right from the omnibox.
 
-You can view the source at https://github.com/will-hart/blitz_fullscreen_chrome_extension and a tutorial of how and why the plugin was built can be seen at http://www.blitzlogger.com/blitz-chrome-url-extension.html
+License
+--------
+
+This software is released under an MIT license.
