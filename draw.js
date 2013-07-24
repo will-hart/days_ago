@@ -43,7 +43,7 @@ var tasks = {
             "9": "hidden",
         },
     },
-    colour_classes = [" panic", " errr-hurry-up", " all-good-mate", " worry-about-it-later"];    
+    start_colour = "F5038C";
     
 function constrain_value(val_to_constrain)
 {
@@ -72,12 +72,9 @@ function constrain_value(val_to_constrain)
  */
 function get_grid_class(grid_item, num_items, item_index)
 {
-
     var x = constrain_value(num_items),
         y = Math.min(item_index, 9),
-        base_class = "",
-        colour_class = colour_classes[3],
-        time_delta = 0;
+        base_class = "";
         
     try 
     {
@@ -87,20 +84,8 @@ function get_grid_class(grid_item, num_items, item_index)
     {
         base_class = "unknown";
     }
-
-    // get the time difference
-    time_delta = grid_item.due_date.diff(moment(), 'days');
     
-    if (time_delta < 0) {
-        colour_class = colour_classes[0];
-    } else if (time_delta <= 2) {
-        colour_class = colour_classes[1];
-    } else if (time_delta <= 7) {
-        colour_class = colour_classes[2];
-    }
-    
-    // todo : get the correct grid colour
-    return base_class + colour_class;
+    return base_class;
 }
 /**
  * Draws a grid from a list of objects
@@ -108,7 +93,8 @@ function get_grid_class(grid_item, num_items, item_index)
 function draw_grid(data, element, draw_grid) {
     // load in initial test data
     var not_done = [],
-        num_items = 0;
+        num_items = 0,
+        current_colour = start_colour;
     
     // clear the element
     element.innerHTML = "";
@@ -142,8 +128,16 @@ function draw_grid(data, element, draw_grid) {
             classNames = get_grid_class(not_done[i], -1, i+1);
         }
         
+        
+        // set up the styles
         elem.setAttribute("class", classNames);
         elem.innerHTML = get_inner_grid_html(not_done[i]);
+        elem.style.backgroundColor = current_colour; 
+        
+        // get the next colour
+        current_colour = ColorLuminance(current_colour, -0.08);
+        
+        // append the new element
         element.appendChild(elem);
     }
 }
