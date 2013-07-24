@@ -109,7 +109,7 @@ function draw_grid(data, element, draw_grid) {
     var not_done = [],
         num_items = 0,
         current_colour = start_colour;
-    
+        
     // clear the element
     element.html("");
     
