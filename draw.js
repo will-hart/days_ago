@@ -1,16 +1,16 @@
-var test_objs = { 
-                    data: [ 
-                        { title: "A test #1", due_date: moment("2013-08-01", "YYYY-MM-DD"), done: false },  
-                        { title: "A test #2", due_date: moment("2013-08-15", "YYYY-MM-DD"), done: false }, 
-                        { title: "A test #4", due_date: moment("2013-07-06", "YYYY-MM-DD"), done: true }, 
-                        { title: "A test #5", due_date: moment("2013-12-07", "YYYY-MM-DD"), done: false }, 
-                        { title: "A test #6", due_date: moment("2013-07-05", "YYYY-MM-DD"), done: true }, 
-                        { title: "A test #6", due_date: moment("2014-07-04", "YYYY-MM-DD"), done: false }, 
-                        { title: "A test #6", due_date: moment("2013-07-03", "YYYY-MM-DD"), done: false }, 
-                        { title: "A test #6", due_date: moment("2013-09-02", "YYYY-MM-DD"), done: false }, 
-                        { title: "A test #6", due_date: moment("2014-07-01", "YYYY-MM-DD"), done: false }
-                    ] 
-                },
+var tasks = {
+                data: [
+                    { title: "A test #1", due_date: moment("2013-08-01", "YYYY-MM-DD"), done: false },  
+                    { title: "A test #2", due_date: moment("2013-08-15", "YYYY-MM-DD"), done: false }, 
+                    { title: "A test #4", due_date: moment("2013-07-06", "YYYY-MM-DD"), done: true }, 
+                    { title: "A test #5", due_date: moment("2013-12-07", "YYYY-MM-DD"), done: false }, 
+                    { title: "A test #6", due_date: moment("2013-07-05", "YYYY-MM-DD"), done: true }, 
+                    { title: "A test #6", due_date: moment("2014-07-04", "YYYY-MM-DD"), done: false }, 
+                    { title: "A test #6", due_date: moment("2013-07-03", "YYYY-MM-DD"), done: false }, 
+                    { title: "A test #6", due_date: moment("2013-09-02", "YYYY-MM-DD"), done: false }, 
+                    { title: "A test #6", due_date: moment("2014-07-01", "YYYY-MM-DD"), done: false }
+                ]
+            },
     
     class_vals = {
         "1": {
@@ -164,9 +164,13 @@ function get_inner_grid_html(grid_obj) {
  */
 function parse_task(task_string) {
     var parts = task_string.split(" in "),
-    date_parts = parts.pop().split(" "),
-    task_name = "",
-    task_date = moment();
+        date_parts = parts.pop().split(" "),
+        task_name = "",
+        task_date = moment();
+    
+    if (! parts.length >= 2) {
+        return false;
+    }
     
     // rebuild the task name inserting " in " where it has been removed
     for (var i = 0; i < parts.length; ++i) {
@@ -179,8 +183,18 @@ function parse_task(task_string) {
     // now parse the date
     task_date = task_date.add(date_parts[1], date_parts[0]);
     
-    console.log(task_name);
-    console.log(moment(task_date));
+    // push the new task
+    var task = {
+        title: task_name,
+        due_date: task_date,
+        done: false
+    };
+    
+    tasks.data.push(task);
+    save_tasks(tasks);    
+    
+    // all done :)
+    return true;
 }
 
 /** 
@@ -202,11 +216,36 @@ function ColorLuminance(hex, lum) {
 	}
 	return rgb;
 }
-   
-/** 
- * fire it up
+
+
+/**
+ * Saves tasks to the database
  */
-window.onload = function () {
+function save_tasks(tasks) {
+    chrome.storage.sync.set({'daysago-data': tasks}, function() {
+        trigger_draw_grid();
+        console.log(chrome.runtime.lastError);
+    });
+}
+
+/**
+ * Loads tasks from local storage and draws the grid when done
+ */
+function load_tasks() {
+    chrome.storage.sync.get('daysago-data', function(items) {
+        if (!items.hasOwnProperty("data")) {
+            items.data = [];
+        }
+        
+        tasks = items;
+        trigger_draw_grid();
+    });
+}
+
+/**
+ * Draws the grid, or a flat list if we are in the manage view 
+ */
+function trigger_draw_grid() {
     var elem = document.getElementById("main-container"),
         proper_classes = true;
     
@@ -217,5 +256,28 @@ window.onload = function () {
     }
     
     // draw the grid
-    draw_grid(test_objs.data, elem, proper_classes);
+    draw_grid(tasks.data, elem, proper_classes);
 }
+
+
+/** 
+ * fire it up
+ */
+
+$(document).ready( function() {
+    // hook up the enter key on the new item box
+    $("#new_task").keydown(function (event) {
+        if (event.which == 13) {
+            event.preventDefault();
+            if (parse_task($(this).val()))
+            {
+                $(this).val("");
+            }
+        }
+    });
+   
+    // draw the grid
+    //trigger_draw_grid();
+    load_tasks();
+});
+
