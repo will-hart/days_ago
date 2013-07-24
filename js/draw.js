@@ -398,7 +398,11 @@ $(document).ready( function() {
     load_tasks();
 });
 
-window.addEventListener('daysAgoSearch', function(e) {
-    var text = e.target;
-    alert(text);
-});
+function parseQuery(text) {
+    var elem = $("#form-container input");
+    if (elem.length == 0) return;
+    
+    elem.val(text);
+    elem.trigger(jQuery.Event('keydown', {which: 13}));
+    elem.focus();
+}

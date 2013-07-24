@@ -5,7 +5,7 @@
     "permissions": [
         "background", 
         "storage",
-        "tabs" 
+        "tabs"
     ],
     "icons" : {
         "16": "icon16.png",
