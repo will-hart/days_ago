@@ -9,6 +9,7 @@ p#welcome-message {
     display:block; 
     color: white; 
     font-size: 2em;
+    display:none;
 }
 
 p#welcome-message a, p#welcome-message a:visited {

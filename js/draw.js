@@ -276,7 +276,7 @@ function load_tasks() {
             
         }
         trigger_draw_grid();
-        $("p#welcome-message").fadeIn();
+        $("p#welcome-message").delay(800).fadeIn('slow');
     });
 }
 
