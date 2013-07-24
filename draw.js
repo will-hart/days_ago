@@ -338,6 +338,7 @@ $(document).ready( function() {
     // hook up the enter key on the new item box
     $("#new_task").keydown(function (event) {
         $(this).removeClass("error");
+        $("#input-errors").slideUp();
         
         if (event.which == 13) {
             event.preventDefault();
@@ -346,6 +347,8 @@ $(document).ready( function() {
                 $(this).val("");
             } else {
                 $(this).addClass("error");
+                $("#input-errors").html(parse_error);
+                $("#input-errors").slideDown();
             }
         }
     });

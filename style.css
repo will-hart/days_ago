@@ -26,11 +26,6 @@ body { background: #141414; }
     margin: 2em auto 0 auto;
 }
 
-#form-container h2 {
-    color: white;
-    float: left;
-}
-
 #form-container #swatches {
     float: right;
 }
@@ -40,6 +35,7 @@ body { background: #141414; }
     width: 1em; 
     height: 1em;
     margin-left: 1em;
+    margin-bottom: 0.5em;
     cursor: pointer;
 }
 
@@ -56,8 +52,13 @@ body { background: #141414; }
     outline: none;
 }
 
-input.error {
+input.error, #input-errors {
     color: #DF5757;
+}
+
+#input-errors {
+    padding: 1em;
+    font-size: 1.5em;
 }
 
 #list-container {
