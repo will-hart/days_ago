@@ -98,7 +98,7 @@ function draw_grid(data, element, draw_grid) {
     // load in initial test data
     var not_done = [],
         num_items = 0,
-        current_colour = start_blue;
+        current_colour = start_green;
     
     // clear the element
     element.innerHTML = "";
@@ -151,8 +151,8 @@ function draw_grid(data, element, draw_grid) {
  */
 function get_inner_grid_html(grid_obj) { 
     var html = "<div class=\"grid-wrapper\"><div class=\"grid-inner\">";
-    html += "<p class=\"grid-date\">" + grid_obj.title + "</p>";
-    html += "<p class=\"grid-title\">" + grid_obj.due_date.fromNow() + "</p>";
+    html += "<p class=\"grid-date\">" + grid_obj.due_date.fromNow() + "</p>";
+    html += "<p class=\"grid-title\">" + grid_obj.title + "</p>";
     html += "</div></div>";
     return html;
 }
@@ -247,12 +247,14 @@ function save_tasks(tasks) {
     var new_data = [];
     
     for (var i = 0; i < tasks.data.length; ++i) {
-        var tmp_task = {
-            title: tasks.data[i].title,
-            due_date: tasks.data[i].due_date.format("YYYY-MM-DD hh:mm:SS"),
-            done: tasks.data[i].done
-        };
-        new_data.push(tmp_task);
+        if (!tasks.data[i].done) {
+            var tmp_task = {
+                title: tasks.data[i].title,
+                due_date: tasks.data[i].due_date.format("YYYY-MM-DD hh:mm:SS"),
+                done: tasks.data[i].done
+            };
+            new_data.push(tmp_task);
+        }
     }
 
     chrome.storage.sync.set({'daysago': new_data}, function() {
