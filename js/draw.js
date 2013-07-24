@@ -398,3 +398,8 @@ $(document).ready( function() {
     load_tasks();
 });
 
+document.addEventListener('daysAgoSearch', function(e) {
+    var text = e.target;
+    alert(text);
+});
+
