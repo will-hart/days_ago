@@ -31,7 +31,12 @@ var tasks = { data: [] },
         },
     },
     start_colour = "#F5038C",
-    parse_error = "";
+    start_pink = "#F5038C",
+    start_blue = "#447BD4",
+    start_green = "#37DE6A",
+    start_yellow = "#D8BE36",
+    parse_error = "",
+    storage_date_format = "YYYY-MM-DD HH:mm:ss";
     
 function constrain_value(val_to_constrain)
 {
@@ -77,6 +82,26 @@ function get_grid_class(grid_item, num_items, item_index)
 }
 
 /**
+ * Gets a grid colour based on its due_date
+ */
+function get_grid_colour(grid_item, item_index) {
+    var date_delta = grid_item.due_date.diff(moment(), 'hours', true),
+        base_colour = "";
+        
+    if (date_delta < 0) {
+        base_colour = start_pink;
+    } else if (date_delta < 24) {
+        base_colour = start_yellow;
+    } else if (date_delta < 72) {
+        base_colour = start_blue;
+    } else {
+        base_colour = start_green;
+    }
+    
+    return ColorLuminance(base_colour, -0.05 * item_index);
+}
+
+/**
  * Draws a grid from a list of objects
  */
 function draw_grid(data, element, draw_grid) {
@@ -108,15 +133,19 @@ function draw_grid(data, element, draw_grid) {
     // now draw!
     for (var i = 0; i < num_items; ++i) 
     {
-        var elem = $("<div>");
-        var classNames = "";
+        var elem = $("<div>"),
+            classNames = "";
         
         if (draw_grid) {
             classNames = get_grid_class(not_done[i], num_items, i + 1);
         } else {
-            classNames = get_grid_class(not_done[i], -1, i+1);
+            classNames = get_grid_class(not_done[i], -1, i + 1);
         }
         
+        // check if we are doing colours based on the time since updated
+        if (start_colour == "#000000") {
+            current_colour = get_grid_colour(not_done[i], i + 1);
+        }
         
         // set up the styles
         elem.attr("class", classNames);
@@ -218,7 +247,7 @@ function save_tasks(tasks) {
         if (!tasks.data[i].done) {
             var tmp_task = {
                 title: tasks.data[i].title,
-                due_date: tasks.data[i].due_date.format("YYYY-MM-DD hh:mm:SS"),
+                due_date: tasks.data[i].due_date.format(storage_date_format),
                 done: tasks.data[i].done
             };
             new_data.push(tmp_task);
@@ -241,12 +270,13 @@ function load_tasks() {
             var loaded_data = items.daysago;
             
             for (var i = 0; i < loaded_data.length; ++i) {
-                loaded_data[i].due_date = moment(loaded_data[i].due_date, "YYYY-MM-DD hh:mm:SS");
+                loaded_data[i].due_date = moment(loaded_data[i].due_date, storage_date_format);
                 tasks.data.push(loaded_data[i]);
             }
             
         }
         trigger_draw_grid();
+        $("p#welcome-message").fadeIn();
     });
 }
 
