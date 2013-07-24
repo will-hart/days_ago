@@ -1,14 +1,27 @@
 body { background: #141414; }
 
 /* admin styles */
+p#welcome-message {
+    position:fixed; 
+    top: 40%; 
+    width: 100%; 
+    text-align:center;
+    display:block; 
+    color: white; 
+    font-size: 2em;
+}
+
+p#welcome-message a, p#welcome-message a:visited {
+    color: #447BD4;
+}
+
 #add-button {
     z-index: 999;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 10px;
     width: 50px;
     height: 30px;
-    text-align: center;
 }
 
 #add-button a {
@@ -50,6 +63,7 @@ body { background: #141414; }
     width: 100%;
     border: none;
     outline: none;
+    background: #EEE;
 }
 
 input.error, #input-errors {
