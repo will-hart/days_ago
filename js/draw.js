@@ -133,9 +133,15 @@ function draw_grid(data, element, draw_grid) {
     
     num_items = not_done.length;
         
-    not_done.sort(
+    not_done = not_done.sort(
         function(a, b) {
-            return a.due_date > b.due_date;
+            if (a.due_date.isSame(b.due_date)) {
+                return 0;
+            }
+            if (a.due_date.isBefore(b.due_date)) {
+                return -1;
+            }
+            return 1;
         }
     );
     
