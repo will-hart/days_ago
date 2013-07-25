@@ -39,7 +39,8 @@ var tasks = { data: [] },
     storage_date_format = "YYYY-MM-DD HH:mm:ss",
     home_screen = true,
     timeout_id = -1,
-    timeout_period = 60000;
+    timeout_period = 60000,
+    command_regex = ^([\S\s]*)(\sin|on\s)([\S\s]*?)$/;
     
 function constrain_value(val_to_constrain)
 {
