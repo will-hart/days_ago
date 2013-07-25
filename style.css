@@ -16,7 +16,7 @@ p#welcome-message a, p#welcome-message a:visited {
     color: #447BD4;
 }
 
-#add-button {
+#manage, #view {
     z-index: 999;
     position: fixed;
     top: 0;
@@ -25,12 +25,12 @@ p#welcome-message a, p#welcome-message a:visited {
     height: 30px;
 }
 
-#add-button a {
+#manage a, #view a {
     color: white;
     text-decoration: none;
 }
 
-#add-button a:hover {
+#manage a:hover, #view a:hover {
     text-decoration: underline;
 }
 

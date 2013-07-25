@@ -36,7 +36,8 @@ var tasks = { data: [] },
     start_green = "#37DE6A",
     start_yellow = "#D8BE36",
     parse_error = "",
-    storage_date_format = "YYYY-MM-DD HH:mm:ss";
+    storage_date_format = "YYYY-MM-DD HH:mm:ss",
+    home_screen = true;
     
 function constrain_value(val_to_constrain)
 {
@@ -284,17 +285,10 @@ function load_tasks() {
  * Draws the grid, or a flat list if we are in the manage view 
  */
 function trigger_draw_grid() {
-    var elem = $("#main-container"),
-        proper_classes = true;
-    
-    // handle the flat list in the manage page
-    if (elem.length === 0) {
-        elem = $("#list-container");
-        proper_classes = false;
-    }
+    var elem = home_screen ? $("#main-container") : $("#list-container");
     
     // draw the grid
-    draw_grid(tasks.data, elem, proper_classes);
+    draw_grid(tasks.data, elem, home_screen);
 }
 
 /**
@@ -389,6 +383,36 @@ $(document).ready( function() {
         
         tasks.data[id].done = true;
         save_tasks(tasks);
+    });
+    
+    $(".manage-button").on('click', function (e) {
+        e.preventDefault();
+        
+        home_screen = false;
+        $("#main-container").slideUp();
+        $("#manage").fadeOut();
+        $("#welcome-message").fadeOut();
+        
+        trigger_draw_grid();
+        
+        $("#form-container").slideDown();
+        $("#list-container").slideDown();
+        $("#view").fadeIn();
+    });
+    
+    $(".home-button").on('click', function (e) {
+        e.preventDefault();
+        
+        home_screen = true;
+        $("#form-container").slideUp();
+        $("#list-container").slideUp();
+        $("#view").fadeOut();
+        
+        trigger_draw_grid();
+        
+        $("#main-container").slideDown();
+        $("#manage").fadeIn();
+        $("#welcome-message").fadeIn();
     });
     
     // get the swatch colour

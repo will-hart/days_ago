@@ -1,0 +1,13 @@
+{
+    "name": "Days Ago",
+    "version": "0.1",
+    "main": "index.html",
+    "window": {
+        "icon": "icon_128.png",
+        "width": 1024,
+        "height": 768,
+        "frame": true,
+        "toolbar": false, 
+        "kiosk": false
+    }
+}
