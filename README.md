@@ -12,3 +12,19 @@ License
 --------
 
 This software is released under an MIT license.
+
+Changes
+-------
+
+**0.1.1**
+
+ - `NEW` Periodically update UI (every 60 seconds) [#4](https://github.com/will-hart/days_ago/issues/4)
+ 
+ 
+ - `FIX` Unable to scroll in list view [#6](https://github.com/will-hart/days_ago/issues/6)
+ - `FIX` Periodcally after adding tasks order of tasks is confused [#5](https://github.com/will-hart/days_ago/issues/5)
+ - `FIX` Remove gap between tasks at some resolutions [#3](https://github.com/will-hart/days_ago/issues/3)
+
+**0.1**
+
+ - Initial release
