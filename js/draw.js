@@ -37,7 +37,9 @@ var tasks = { data: [] },
     start_yellow = "#D8BE36",
     parse_error = "",
     storage_date_format = "YYYY-MM-DD HH:mm:ss",
-    home_screen = true;
+    home_screen = true,
+    timeout_id = -1,
+    timeout_period = 60000;
     
 function constrain_value(val_to_constrain)
 {
@@ -111,6 +113,12 @@ function draw_grid(data, element, draw_grid) {
         num_items = 0,
         current_colour = start_colour;
         
+    // clear the timeout
+    if (timeout_id != -1) {
+        clearTimeout(timeout_id);
+        timeout_id = -1;
+    }
+        
     // clear the element
     element.html("");
     
@@ -126,7 +134,7 @@ function draw_grid(data, element, draw_grid) {
     num_items = not_done.length;
         
     not_done.sort(
-        function(a,b) {
+        function(a, b) {
             return a.due_date > b.due_date;
         }
     );
@@ -163,6 +171,9 @@ function draw_grid(data, element, draw_grid) {
     
     // save the open tasks
     tasks.data = not_done;
+    
+    // set an update timeout
+    timeout_id = setTimeout(function() { trigger_draw_grid(); }, timeout_period);
 }
 
 /** 
