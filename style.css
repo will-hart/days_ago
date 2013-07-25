@@ -133,6 +133,7 @@ input.error, #input-errors {
 .unknown {
     padding: 1em 0.5em;
     cursor:no-drop;
+    font-size: 0.8em !important;
 }
 
 .unknown .grid-wrapper { text-align: left; }
@@ -146,6 +147,7 @@ input.error, #input-errors {
     left: 0;
     height: 100%;
     width: 100%;
+    z-index: 3;
 }
 
 .single-one-of-three {
@@ -165,9 +167,10 @@ input.error, #input-errors {
     top: 0;
     bottom: 0;
     right: 0;
-    left: 60%;
+    left: 59%;
     height: 50%;
-    width: 40%;
+    width: 41%;
+    z-index: 2;
 }
 
 .right-row-second-of-three {
@@ -175,7 +178,8 @@ input.error, #input-errors {
 }
 
 .right-row-third-of-three {
-    top: 50%;
+    top: 49%;
+    height: 51%;
 }
 
 .right-row-second-of-more {
@@ -184,9 +188,9 @@ input.error, #input-errors {
 }
 
 .right-row-third-of-more {
-    top: 35%;
+    top: 34%;
     bottom: 70%;
-    height: 35%;
+    height: 36%;
 }
 
 .bottom-row {
@@ -199,17 +203,25 @@ input.error, #input-errors {
 }
 
 .bottom-row-two {
-    left: 20%;
+    left: 19%;
+    width: 21%;
+    z-index: 0;
 }
 
 .bottom-row-three {
-    left: 40%;
+    left: 39%;
+    width: 21%;
+    z-index: -1;
 }
 
 .bottom-row-four {
-    left: 60%;
+    left: 59%;
+    width: 21%;
+    z-index: -2;
 }
 
 .bottom-row-five {
-    left: 80%;
+    left: 79%;
+    width: 21%;
+    z-index: -3;
 }
