@@ -99,7 +99,7 @@ function get_grid_colour(grid_item, item_index) {
         base_colour = start_green;
     }
     
-    return ColorLuminance(base_colour, -0.05 * item_index);
+    return ColorLuminance(base_colour, -0.03 * item_index);
 }
 
 /**
