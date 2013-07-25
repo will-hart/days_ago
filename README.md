@@ -7,10 +7,24 @@ A simple yet beautiful extension for Google Chrome which lets you manage upcomin
     
 A task `Book plane tickets` will be created in five days time.  To mark a task as finished just click it in the "manage" screen.
 
-Currently if you type `daysago` and hit `tab` in the Chrome omnibox you can hit enter to open the extension.  In future this will 
-allow you to create new tasks right from the omnibox.
 
 License
 --------
 
 This software is released under an MIT license.
+
+Changes
+-------
+
+**0.1.1**
+
+ - `NEW` Periodically update UI (every 60 seconds) [#4](https://github.com/will-hart/days_ago/issues/4)
+ 
+ 
+ - `FIX` Unable to scroll in list view [#6](https://github.com/will-hart/days_ago/issues/6)
+ - `FIX` Periodcally after adding tasks order of tasks is confused [#5](https://github.com/will-hart/days_ago/issues/5)
+ - `FIX` Remove gap between tasks at some resolutions [#3](https://github.com/will-hart/days_ago/issues/3)
+
+**0.1**
+
+ - Initial release
