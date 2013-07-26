@@ -16,6 +16,10 @@ This software is released under an MIT license.
 Changes
 -------
 
+**0.1.2**
+
+ - `FIX` Page transitions improved
+
 **0.1.1**
 
  - `NEW` Periodically update UI (every 60 seconds) [#4](https://github.com/will-hart/days_ago/issues/4)
