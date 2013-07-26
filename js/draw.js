@@ -40,7 +40,7 @@ var tasks = { data: [] },
     home_screen = true,
     timeout_id = -1,
     timeout_period = 60000,
-    command_regex = ^([\S\s]*)(\sin|on\s)([\S\s]*?)$/;
+    command_regex = /^([\S\s]*)(\sin|on\s)([\S\s]*?)$/;
     
 function constrain_value(val_to_constrain)
 {
@@ -407,30 +407,32 @@ $(document).ready( function() {
         e.preventDefault();
         
         home_screen = false;
-        $("#main-container").slideUp();
         $("#manage").fadeOut();
-        $("#welcome-message").fadeOut();
+        $("#welcome-message").hide();
+        $("#main-container").fadeOut('slow', function() {
+            $("#form-container").slideDown();
+            $("#list-container").slideDown();
+            $("#view").fadeIn();
+        });
         
         trigger_draw_grid();
         
-        $("#form-container").slideDown();
-        $("#list-container").slideDown();
-        $("#view").fadeIn();
     });
     
     $(".home-button").on('click', function (e) {
         e.preventDefault();
         
         home_screen = true;
-        $("#form-container").slideUp();
-        $("#list-container").slideUp();
-        $("#view").fadeOut();
+        $("#form-container").slideUp('fast');
+        $("#list-container").slideUp('fast');
+        $("#view").fadeOut('slow', function() {
+            $("#main-container").fadeIn('slow', function() {
+                $("#welcome-message").show();       
+                $("#manage").fadeIn();
+            });
+        });
         
         trigger_draw_grid();
-        
-        $("#main-container").slideDown();
-        $("#manage").fadeIn();
-        $("#welcome-message").fadeIn();
     });
     
     // get the swatch colour
