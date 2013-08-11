@@ -40,7 +40,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.43348215"
-     inkscape:cx="-213.76616"
+     inkscape:cx="-254.13691"
      inkscape:cy="152.7735"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -60,7 +60,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -571,17 +571,14 @@
       </g>
     </g>
     <g
-       id="g3297"
-       inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       id="g3835">
       <rect
          y="892.06555"
          x="-1109.6189"
          height="128"
          width="128"
          id="rect3295"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+         style="fill:#ffffff;fill-opacity:0;fill-rule:nonzero;stroke:none" />
       <g
          id="g3281"
          transform="matrix(0.34146931,0,0,0.34146931,-1102.284,971.62643)"
