@@ -1,7 +1,7 @@
 var DaysAgo, GridItem;
 
 GridItem = (function() {
-  var complete, dueDate, id, title;
+  var complete, constructor, dueDate, id, title;
 
   function GridItem() {}
 
@@ -13,18 +13,18 @@ GridItem = (function() {
 
   complete = false;
 
-  constructor(function(title, dueDate, complete) {
+  constructor = function(title, dueDate, complete) {
     this.title = title;
     this.dueDate = dueDate;
     this.complete = complete;
-  });
+  };
 
   return GridItem;
 
 })();
 
 DaysAgo = (function() {
-  var classVals, colorLuminance, commandRegex, homeScreen, parseError, parseQuery, rgb2hex, startBlue, startColour, startGreen, startPink, startYellow, storageDateFormat, tasks, timeoutId, timeoutPeriod;
+  var classVals, commandRegex, homeScreen, parseError, startBlue, startColour, startGreen, startPink, startYellow, storageDateFormat, tasks, timeoutId, timeoutPeriod;
 
   function DaysAgo() {}
 
@@ -107,7 +107,7 @@ DaysAgo = (function() {
   */
 
 
-  getGridClass(item, count, index)(function() {
+  DaysAgo.prototype.getGridClass = function(item, count, index) {
     var baseClass, x;
     x = this.constrainValue(num_items);
     try {
@@ -116,14 +116,14 @@ DaysAgo = (function() {
       baseClass = "unknown";
     }
     return baseClass;
-  });
+  };
 
   /*
   Gets a grid colour based on its due_date
   */
 
 
-  getGridColour(item, index)(function() {
+  DaysAgo.prototype.getGridColour = function(item, index) {
     var baseColour, dateDelta;
     dateDelta = item.dueDate.diff(moment(), "hours", true);
     baseColour = "";
@@ -140,14 +140,14 @@ DaysAgo = (function() {
       }
     }).call(this);
     return this.colourLuminance(baseColour, -0.03 * index);
-  });
+  };
 
   /*
   found at http://www.sitepoint.com/javascript-generate-lighter-darker-color/
   */
 
 
-  colorLuminance = function(hex, lum) {
+  DaysAgo.prototype.colorLuminance = function(hex, lum) {
     var c, i, rgb;
     hex = String(hex).replace(/[^0-9a-f]/g, "");
     if (hex.length < 6) {
@@ -171,7 +171,7 @@ DaysAgo = (function() {
   */
 
 
-  drawGrid(data, element, grid)(function() {
+  DaysAgo.prototype.drawGrid = function(data, element, grid) {
     var classNames, currentColour, elem, i, item, notDone, not_done, numItems;
     notDone = (function() {
       var _i, _len, _results;
@@ -219,25 +219,25 @@ DaysAgo = (function() {
     }
     this.tasks.data = notDone;
     return this.timeoutId = setTimeout(triggerDrawGrid(), this.timeoutPeriod);
-  });
+  };
 
   /*
   Return HTML for displaying a task inside the main container
   */
 
 
-  getInnerGridHtml(grid)(function() {
+  DaysAgo.prototype.getInnerGridHtml = function(grid) {
     var html;
     return html = "<div class=\"grid-wrapper\">\n  <div class=\"grid-inner\">\n    <p class=\"grid-date\">" + (grid.dueDate.fromNow()) + "</p>\n    <p class=\"grid-title\">" + grid.title + "</p>\n  </div>\n</div>";
-  });
+  };
 
   /*
   parse a task string such as "write a book in 6 days" or "write a book on 2012-12-15"
   */
 
 
-  parseTask(task)(function() {
-    var dateParts, parts, task, taskDate, taskName, _ref;
+  DaysAgo.prototype.parseTask = function(task) {
+    var dateParts, parts, taskDate, taskName, _ref;
     parts = task.split(" in ");
     dateParts = parts.pop.split(" ");
     taskName = "";
@@ -259,16 +259,16 @@ DaysAgo = (function() {
     taskDate = taskDate.add(dateParts[1], dateParts[0]);
     task = new GridItem(taskName, taskDate, false);
     this.tasks.data.push(task);
-    this.saveTasks;
+    this.saveTasks();
     return true;
-  });
+  };
 
   /*
   Saves tasks to the database
   */
 
 
-  saveTasks(function() {
+  DaysAgo.prototype.saveTasks = function() {
     var i, incomplete, item, newTasks, notDone, tmpTask;
     incomplete = notDone = (function() {
       var _i, _len, _ref, _results;
@@ -284,7 +284,7 @@ DaysAgo = (function() {
     }).call(this);
     newTasks = [];
     i = 0;
-    while (i < incomplete.data.lengt) {
+    while (i < incomplete.data.length) {
       tmpTask = {
         title: incomplete[i].title,
         due_date: incomplete[i].due_date.formatstorageDateFormat,
@@ -296,77 +296,77 @@ DaysAgo = (function() {
     return chrome.storage.sync.set({
       daysago: new_data
     }, function() {
-      trigger_draw_grid();
+      this.triggerDrawGrid();
       return console.log(chrome.runtime.lastError);
     });
-  });
+  };
 
   /*
   Loads tasks from local storage and draws the grid when done
   */
 
 
-  loadTasks(function() {});
-
-  chrome.storage.sync.get("daysago", function(items) {
-    var i, loaded_data;
-    tasks.data = [];
-    if (items.hasOwnProperty("daysago")) {
-      loaded_data = items.daysago;
-      i = 0;
-      while (i < loaded_data.length) {
-        loaded_data[i].due_date = moment(loaded_data[i].due_date, storage_date_format);
-        tasks.data.push(loaded_data[i]);
-        ++i;
+  DaysAgo.prototype.loadTasks = function() {
+    return chrome.storage.sync.get("daysago", function(items) {
+      var i, loaded_data;
+      this.tasks.data = [];
+      if (items.hasOwnProperty("daysago")) {
+        loaded_data = items.daysago;
+        i = 0;
+        while (i < loaded_data.length) {
+          loaded_data[i].due_date = moment(loaded_data[i].dueDate, this.storageDateFormat);
+          this.tasks.data.push(loaded_data[i]);
+          ++i;
+        }
       }
-    }
-    triggerDrawGrid();
-    return $("p#welcome-message").delay(800).fadeIn("slow");
-  });
+      this.triggerDrawGrid();
+      return $("p#welcome-message").delay(800).fadeIn("slow");
+    });
+  };
 
   /*
   Draws the grid, or a flat list if we are in the manage view
   */
 
 
-  triggerDrawGrid(function() {
+  DaysAgo.prototype.triggerDrawGrid = function() {
     var elem;
-    elem = (home_screen ? $("#main-container") : $("#list-container"));
-    return draw_grid(tasks.data, elem, home_screen);
-  });
+    elem = (this.homeScreen ? $("#main-container") : $("#list-container"));
+    return this.drawGrid(tasks.data, elem, this.homeScreen);
+  };
 
   /*
   Gets the swatch colour from storage and saves to start_colour
   */
 
 
-  getSwatchColour(function() {
+  DaysAgo.prototype.getSwatchColour = function() {
     return chrome.storage.sync.get("daysago_swatch", function(item) {
       this.startColour = item.daysago_swatch;
-      return triggerDrawGrid();
+      return this.triggerDrawGrid();
     });
-  });
+  };
 
   /*
   Sets the swatch colour and saves it to database
   */
 
 
-  setSwatchColour(newColour)(function() {
+  DaysAgo.prototype.setSwatchColour = function(newColour) {
     return chrome.storage.sync.set({
       daysago_swatch: newColour
     }, function() {
       this.startColour = newColour;
-      return triggerDrawGrid();
+      return this.triggerDrawGrid();
     });
-  });
+  };
 
   /*
   converts an rgb value to hex
   */
 
 
-  rgb2hex = function(rgb) {
+  DaysAgo.prototype.rgb2hex = function(rgb) {
     var hex;
     if (rgb.search("rgb" === -1)) {
       return rgb;
@@ -384,7 +384,7 @@ DaysAgo = (function() {
   */
 
 
-  parseQuery = function(text) {
+  DaysAgo.prototype.parseQuery = function(text) {
     var elem;
     elem = $("#form-container input");
     if (elem.length === 0) {
@@ -403,11 +403,11 @@ DaysAgo = (function() {
 
 
   $(document).ready(function() {
-    $("#new_task").keydown(function(event) {
+    $("#new_task").keydown(function(e) {
       $(this).removeClass("error");
       $("#input-errors").slideUp();
-      if (event.which === 13) {
-        event.preventDefault();
+      if (e.which === 13) {
+        e.preventDefault();
         if (parse_task($(this).val())) {
           return $(this).val("");
         } else {
@@ -421,14 +421,14 @@ DaysAgo = (function() {
       var newColour;
       e.preventDefault();
       newColour = rgb2hex($(this).css("backgroundColor"));
-      return setSwatchColour(newColour);
+      return this.setSwatchColour(newColour);
     });
     $("#list-container").on("click", ".unknown", function(e) {
       var id;
       e.preventDefault();
       id = $(this).data("index");
-      tasks.data[id].done = true;
-      return saveTasks(this.tasks);
+      this.tasks.data[id].done = true;
+      return this.saveTasks(this.tasks);
     });
     $(".manage-button").on("click", function(e) {
       e.preventDefault();
@@ -440,7 +440,7 @@ DaysAgo = (function() {
         $("#list-container").slideDown();
         return $("#view").fadeIn();
       });
-      return triggerDrawGrid();
+      return this.triggerDrawGrid();
     });
     $(".home-button").on("click", function(e) {
       e.preventDefault();
@@ -454,9 +454,9 @@ DaysAgo = (function() {
         });
       });
     });
-    triggerDrawGrid();
-    getSwatchColour();
-    return loadTasks();
+    this.triggerDrawGrid();
+    this.getSwatchColour();
+    return this.loadTasks();
   });
 
   return DaysAgo;
