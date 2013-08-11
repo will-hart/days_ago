@@ -165,7 +165,7 @@ input.error, #input-errors {
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 3;
+    z-index: 9;
 }
 
 .single-one-of-three {
@@ -188,27 +188,31 @@ input.error, #input-errors {
     left: 59%;
     height: 50%;
     width: 41%;
-    z-index: 2;
+    z-index: 8;
 }
 
 .right-row-second-of-three {
     bottom: 50%;
+    z-index: 7;
 }
 
 .right-row-third-of-three {
     top: 49%;
     height: 51%;
+    z-index: 6;
 }
 
 .right-row-second-of-more {
     bottom: 35%;
     height: 35%;
+    z-index: 7;
 }
 
 .right-row-third-of-more {
     top: 34%;
     bottom: 70%;
     height: 36%;
+    z-index: 6;
 }
 
 .bottom-row {
@@ -217,30 +221,30 @@ input.error, #input-errors {
     top: 69%;
     left: 0;
     height: 31%;
-    z-index: 1;
+    z-index: 5;
     font-size: 0.9em;
 }
 
 .bottom-row-two {
     left: 19%;
     width: 21%;
-    z-index: 0;
+    z-index: 4;
 }
 
 .bottom-row-three {
     left: 39%;
     width: 21%;
-    z-index: -1;
+    z-index: 3;
 }
 
 .bottom-row-four {
     left: 59%;
     width: 21%;
-    z-index: -2;
+    z-index: 2;
 }
 
 .bottom-row-five {
     left: 79%;
     width: 21%;
-    z-index: -3;
+    z-index: 1;
 }

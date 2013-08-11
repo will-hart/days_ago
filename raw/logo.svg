@@ -39,15 +39,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-<<<<<<< Updated upstream
-     inkscape:zoom="0.43348215"
-     inkscape:cx="213.08608"
-     inkscape:cy="192.73291"
-=======
      inkscape:zoom="0.61303634"
      inkscape:cx="-20.823475"
      inkscape:cy="-260.19601"
->>>>>>> Stashed changes
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -55,7 +49,9 @@
      inkscape:window-height="1178"
      inkscape:window-x="-8"
      inkscape:window-y="18"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -74,254 +70,402 @@
      id="layer1"
      transform="translate(0,-772.36218)">
     <g
-       id="g3037">
+       id="g3040"
+       transform="translate(87.662203,96.889802)"
+       inkscape:export-filename="C:\Code\days-ago\icon48.png"
+       inkscape:export-xdpi="15.37"
+       inkscape:export-ydpi="15.37">
       <rect
          inkscape:export-ydpi="41.142857"
          inkscape:export-xdpi="41.142857"
          inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
-         y="772.36218"
-         x="0"
-         height="280"
-         width="280"
-         id="rect2985"
-         style="fill:#d9005b;fill-opacity:1;stroke:none" />
-      <rect
-         inkscape:export-ydpi="41.142857"
-         inkscape:export-xdpi="41.142857"
-         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
-         y="817.36218"
-         x="0"
-         height="235"
-         width="235"
-         id="rect3757"
+         y="-186.13934"
+         x="25.3759"
+         height="281.138"
+         width="281.138"
+         id="rect3097"
          style="fill:#ff6f00;fill-opacity:1;stroke:none" />
       <rect
          inkscape:export-ydpi="41.142857"
          inkscape:export-xdpi="41.142857"
          inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
-         style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
-         id="rect3759"
-         width="185"
-         height="185"
-         x="0"
-         y="867.36218" />
+         y="-185.00134"
+         x="25.3759"
+         height="203.8723"
+         width="196.9516"
+         id="rect3095"
+         style="fill:#d9005b;fill-opacity:1;stroke:none" />
       <rect
          inkscape:export-ydpi="41.142857"
          inkscape:export-xdpi="41.142857"
          inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
          style="fill:#76af2c;fill-opacity:1;stroke:none"
-         id="rect3755"
-         width="140"
-         height="140"
-         x="0"
-         y="912.36218" />
-      <text
+         id="rect3101"
+         width="280.72092"
+         height="73.099899"
+         x="25.3759"
+         y="21.898756" />
+      <rect
          inkscape:export-ydpi="41.142857"
          inkscape:export-xdpi="41.142857"
          inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+         style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
+         id="rect3099"
+         width="196.41858"
+         height="73.057388"
+         x="25.3759"
+         y="21.941267" />
+      <text
+         xml:space="preserve"
+         style="font-size:100.40029144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monda;-inkscape-font-specification:Monda Bold"
+         x="46.198349"
+         y="-46.885792"
+         id="text3113"
          sodipodi:linespacing="125%"
-         id="text3761"
-         y="1039.7067"
-         x="1.7809607"
-         style="font-size:97.19939423px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
-         xml:space="preserve"><tspan
-           style="fill:#ffffff"
-           y="1039.7067"
-           x="1.7809607"
-           id="tspan3763"
-           sodipodi:role="line">DA</tspan></text>
+         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+         inkscape:export-xdpi="41.142857"
+         inkscape:export-ydpi="41.142857"><tspan
+           dy="0"
+           dx="0"
+           sodipodi:role="line"
+           id="tspan3115"
+           x="46.198349"
+           y="-46.885792"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:Monda;-inkscape-font-specification:Monda Bold">DA</tspan></text>
     </g>
-    <rect
-       style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect3808"
-       width="1019.9794"
-       height="1600"
-       x="483.48471"
-       y="-2140"
-       inkscape:export-filename="C:\Code\days-ago\banner.png"
-       inkscape:export-xdpi="24.75"
-       inkscape:export-ydpi="24.75"
-       transform="matrix(0,1,-1,0,0,0)" />
     <g
-       id="g3828"
-       transform="matrix(0.82566252,0,0,0.82566252,-9.9353463,-311.87126)"
+       id="g3087"
        inkscape:export-filename="C:\Code\days-ago\img\logo.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       inkscape:export-xdpi="36.150002"
+       inkscape:export-ydpi="36.150002">
+      <text
+         xml:space="preserve"
+         style="font-size:36.08533096px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
+         x="611.47546"
+         y="366.32053"
+         id="text3061"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3063"
+           x="611.47546"
+           y="366.32053"
+           style="font-size:101.03892517px;font-weight:bold;fill:#ffffff;-inkscape-font-specification:Aller Bold">DaysAgo</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:36.88588715px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
+         x="615.98846"
+         y="438.08276"
+         id="text3065"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3067"
+           x="615.98846"
+           y="438.08276">minimalist task tracking</tspan></text>
       <g
-         transform="translate(1963.2181,-791.26672)"
-         id="g3812">
+         id="g3073"
+         transform="matrix(0.82768284,0,0,0.82768284,677.98752,101.7252)">
         <rect
-           style="fill:#d9005b;fill-opacity:1;stroke:none"
-           id="rect2985-6"
-           width="280"
-           height="280"
-           x="-539.09369"
-           y="1119.9832"
-           inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-           inkscape:export-xdpi="30.857143"
-           inkscape:export-ydpi="30.857143" />
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           y="-186.13934"
+           x="25.3759"
+           height="281.138"
+           width="281.138"
+           id="rect3075"
+           style="fill:#ff6f00;fill-opacity:1;stroke:none" />
         <rect
-           style="fill:#ff6f00;fill-opacity:1;stroke:none"
-           id="rect3757-1"
-           width="235"
-           height="235"
-           x="-539.09369"
-           y="1164.9832"
-           inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-           inkscape:export-xdpi="30.857143"
-           inkscape:export-ydpi="30.857143" />
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           y="-185.00134"
+           x="25.3759"
+           height="203.8723"
+           width="196.9516"
+           id="rect3077"
+           style="fill:#d9005b;fill-opacity:1;stroke:none" />
         <rect
-           y="1214.9832"
-           x="-539.09369"
-           height="185"
-           width="185"
-           id="rect3759-7"
-           style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
-           inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-           inkscape:export-xdpi="30.857143"
-           inkscape:export-ydpi="30.857143" />
-        <rect
-           y="1259.9832"
-           x="-539.09369"
-           height="140"
-           width="140"
-           id="rect3755-6"
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
            style="fill:#76af2c;fill-opacity:1;stroke:none"
-           inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-           inkscape:export-xdpi="30.857143"
-           inkscape:export-ydpi="30.857143" />
+           id="rect3079"
+           width="280.72092"
+           height="73.099899"
+           x="25.3759"
+           y="21.898756" />
+        <rect
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
+           id="rect3081"
+           width="196.41858"
+           height="73.057388"
+           x="25.3759"
+           y="21.941267" />
         <text
            xml:space="preserve"
-           style="font-size:97.19939423px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
-           x="-537.31274"
-           y="1387.3276"
-           id="text3761-2"
+           style="font-size:100.40029144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monda;-inkscape-font-specification:Monda Bold"
+           x="46.198349"
+           y="-46.885792"
+           id="text3083"
            sodipodi:linespacing="125%"
-           inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-           inkscape:export-xdpi="30.857143"
-           inkscape:export-ydpi="30.857143"><tspan
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-ydpi="41.142857"><tspan
+             dy="0"
+             dx="0"
              sodipodi:role="line"
-             id="tspan3763-5"
-             x="-537.31274"
-             y="1387.3276"
-             style="fill:#ffffff">DA</tspan></text>
+             id="tspan3085"
+             x="46.198349"
+             y="-46.885792"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:Monda;-inkscape-font-specification:Monda Bold">DA</tspan></text>
       </g>
+    </g>
+    <g
+       id="g3125">
       <text
          sodipodi:linespacing="125%"
          id="text3820"
-         y="835.36102"
-         x="1317.0085"
-         style="font-size:43.70469666px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
+         y="377.85504"
+         x="1077.4692"
+         style="font-size:36.08533096px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
          xml:space="preserve"><tspan
-           style="font-size:122.37315369px;font-weight:bold;-inkscape-font-specification:Aller Bold"
-           y="835.36102"
-           x="1317.0085"
+           style="font-size:101.03892517px;font-weight:bold;-inkscape-font-specification:Aller Bold"
+           y="377.85504"
+           x="1077.4692"
            id="tspan3822"
            sodipodi:role="line">DaysAgo</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text3824"
-         y="922.27576"
-         x="1322.4745"
-         style="font-size:44.6742897px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
+         y="449.61728"
+         x="1081.9823"
+         style="font-size:36.88588715px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
          xml:space="preserve"><tspan
-           y="922.27576"
-           x="1322.4745"
+           y="449.61728"
+           x="1081.9823"
            id="tspan3826"
            sodipodi:role="line">minimalist task tracking</tspan></text>
-    </g>
-    <g
-       transform="translate(-224.12442,362.41651)"
-       id="g3841"
-       inkscape:export-filename="C:\Code\days-ago-pg\www\res\screen\android\screen-hdpi-landscape.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
       <g
-         id="g3843"
-         transform="translate(1963.2181,-791.26672)">
+         id="g3111"
+         transform="matrix(0.844094,0,0,0.844094,1138.9511,114.00756)">
         <rect
-           inkscape:export-ydpi="30.857143"
-           inkscape:export-xdpi="30.857143"
-           inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-           y="1119.9832"
-           x="-539.09369"
-           height="280"
-           width="280"
-           id="rect3845"
-           style="fill:#d9005b;fill-opacity:1;stroke:none" />
-        <rect
-           inkscape:export-ydpi="30.857143"
-           inkscape:export-xdpi="30.857143"
-           inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-           y="1164.9832"
-           x="-539.09369"
-           height="235"
-           width="235"
-           id="rect3847"
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           y="-186.13934"
+           x="25.3759"
+           height="281.138"
+           width="281.138"
+           id="rect3113"
            style="fill:#ff6f00;fill-opacity:1;stroke:none" />
         <rect
-           inkscape:export-ydpi="30.857143"
-           inkscape:export-xdpi="30.857143"
-           inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-           style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
-           id="rect3849"
-           width="185"
-           height="185"
-           x="-539.09369"
-           y="1214.9832" />
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           y="-185.00134"
+           x="25.3759"
+           height="203.8723"
+           width="196.9516"
+           id="rect3115"
+           style="fill:#d9005b;fill-opacity:1;stroke:none" />
         <rect
-           inkscape:export-ydpi="30.857143"
-           inkscape:export-xdpi="30.857143"
-           inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
            style="fill:#76af2c;fill-opacity:1;stroke:none"
-           id="rect3851"
-           width="140"
-           height="140"
-           x="-539.09369"
-           y="1259.9832" />
+           id="rect3117"
+           width="280.72092"
+           height="73.099899"
+           x="25.3759"
+           y="21.898756" />
+        <rect
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
+           id="rect3119"
+           width="196.41858"
+           height="73.057388"
+           x="25.3759"
+           y="21.941267" />
         <text
-           inkscape:export-ydpi="30.857143"
-           inkscape:export-xdpi="30.857143"
-           inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
+           xml:space="preserve"
+           style="font-size:100.40029144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monda;-inkscape-font-specification:Monda Bold"
+           x="46.198349"
+           y="-46.885792"
+           id="text3121"
            sodipodi:linespacing="125%"
-           id="text3853"
-           y="1387.3276"
-           x="-537.31274"
-           style="font-size:97.19939423px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
-           xml:space="preserve"><tspan
-             style="fill:#ffffff"
-             y="1387.3276"
-             x="-537.31274"
-             id="tspan3855"
-             sodipodi:role="line">DA</tspan></text>
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-ydpi="41.142857"><tspan
+             dy="0"
+             dx="0"
+             sodipodi:role="line"
+             id="tspan3123"
+             x="46.198349"
+             y="-46.885792"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:Monda;-inkscape-font-specification:Monda Bold">DA</tspan></text>
       </g>
-      <text
-         xml:space="preserve"
-         style="font-size:43.70469666px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
-         x="1317.0085"
-         y="835.36102"
-         id="text3857"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan3859"
-           x="1317.0085"
-           y="835.36102"
-           style="font-size:122.37315369px;font-weight:bold;-inkscape-font-specification:Aller Bold">DaysAgo</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:44.6742897px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
-         x="1322.4745"
-         y="922.27576"
-         id="text3861"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan3863"
-           x="1322.4745"
-           y="922.27576">minimalist task tracking</tspan></text>
     </g>
     <g
-<<<<<<< Updated upstream
+       transform="translate(-352.95571,117.6519)"
+       id="g3138">
+      <g
+         id="g3152"
+         inkscape:export-filename="C:\Code\days-ago\icon16.png"
+         inkscape:export-xdpi="5.1199999"
+         inkscape:export-ydpi="5.1199999">
+        <rect
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           y="-186.13934"
+           x="25.3759"
+           height="281.138"
+           width="281.138"
+           id="rect3140"
+           style="fill:#ff6f00;fill-opacity:1;stroke:none" />
+        <rect
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           y="-185.00134"
+           x="25.3759"
+           height="203.8723"
+           width="196.9516"
+           id="rect3142"
+           style="fill:#d9005b;fill-opacity:1;stroke:none" />
+        <rect
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           style="fill:#76af2c;fill-opacity:1;stroke:none"
+           id="rect3144"
+           width="280.72092"
+           height="73.099899"
+           x="25.3759"
+           y="21.898756" />
+        <rect
+           inkscape:export-ydpi="41.142857"
+           inkscape:export-xdpi="41.142857"
+           inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+           style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
+           id="rect3146"
+           width="196.41858"
+           height="73.057388"
+           x="25.3759"
+           y="21.941267" />
+      </g>
+    </g>
+    <g
+       id="g3266"
+       inkscape:export-filename="C:\Code\days-ago\banner920x680.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="C:\Code\days-ago\banner920x680.png"
+         y="-1011.2759"
+         x="1137.1288"
+         height="919.99994"
+         width="680.14783"
+         id="rect3808"
+         style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <g
+         transform="matrix(1.0454545,0,0,1.0002174,-788.47774,1269.3125)"
+         id="g3158">
+        <text
+           sodipodi:linespacing="125%"
+           id="text3160"
+           y="377.85504"
+           x="1077.4692"
+           style="font-size:36.08533096px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
+           xml:space="preserve"><tspan
+             style="font-size:101.03892517px;font-weight:bold;-inkscape-font-specification:Aller Bold"
+             y="377.85504"
+             x="1077.4692"
+             id="tspan3162"
+             sodipodi:role="line">DaysAgo</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text3164"
+           y="449.61728"
+           x="1081.9823"
+           style="font-size:36.88588715px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
+           xml:space="preserve"><tspan
+             y="449.61728"
+             x="1081.9823"
+             id="tspan3166"
+             sodipodi:role="line">minimalist task tracking</tspan></text>
+        <g
+           id="g3168"
+           transform="matrix(0.844094,0,0,0.844094,1138.9511,114.00756)">
+          <rect
+             inkscape:export-ydpi="41.142857"
+             inkscape:export-xdpi="41.142857"
+             inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+             y="-186.13934"
+             x="25.3759"
+             height="281.138"
+             width="281.138"
+             id="rect3170"
+             style="fill:#ff6f00;fill-opacity:1;stroke:none" />
+          <rect
+             inkscape:export-ydpi="41.142857"
+             inkscape:export-xdpi="41.142857"
+             inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+             y="-185.00134"
+             x="25.3759"
+             height="203.8723"
+             width="196.9516"
+             id="rect3172"
+             style="fill:#d9005b;fill-opacity:1;stroke:none" />
+          <rect
+             inkscape:export-ydpi="41.142857"
+             inkscape:export-xdpi="41.142857"
+             inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+             style="fill:#76af2c;fill-opacity:1;stroke:none"
+             id="rect3174"
+             width="280.72092"
+             height="73.099899"
+             x="25.3759"
+             y="21.898756" />
+          <rect
+             inkscape:export-ydpi="41.142857"
+             inkscape:export-xdpi="41.142857"
+             inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+             style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
+             id="rect3176"
+             width="196.41858"
+             height="73.057388"
+             x="25.3759"
+             y="21.941267" />
+          <text
+             xml:space="preserve"
+             style="font-size:100.40029144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monda;-inkscape-font-specification:Monda Bold"
+             x="46.198349"
+             y="-46.885792"
+             id="text3178"
+             sodipodi:linespacing="125%"
+             inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+             inkscape:export-xdpi="41.142857"
+             inkscape:export-ydpi="41.142857"><tspan
+               dy="0"
+               dx="0"
+               sodipodi:role="line"
+               id="tspan3180"
+               x="46.198349"
+               y="-46.885792"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:Monda;-inkscape-font-specification:Monda Bold">DA</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
        id="g3031"
        inkscape:export-filename="C:\Code\days-ago\icon16.png"
        inkscape:export-xdpi="5.1428571"
@@ -336,26 +480,115 @@
          inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
          inkscape:export-xdpi="41.142857"
          inkscape:export-ydpi="41.142857" />
+       id="g3238"
+       inkscape:export-filename="C:\Code\days-ago\banner440x280.png"
+       inkscape:export-xdpi="45"
+       inkscape:export-ydpi="45">
       <rect
-         style="fill:#ff6f00;fill-opacity:1;stroke:none"
-         id="rect3021"
-         width="235"
-         height="235"
-         x="-13.8414"
-         y="321.37866"
-         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
-         inkscape:export-xdpi="41.142857"
-         inkscape:export-ydpi="41.142857" />
-      <rect
-         y="371.37866"
-         x="-13.8414"
-         height="185"
-         width="185"
-         id="rect3023"
-         style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
-         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
-         inkscape:export-xdpi="41.142857"
-         inkscape:export-ydpi="41.142857" />
+         style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="rect3199"
+         width="560"
+         height="880"
+         x="1257.2026"
+         y="88.898003"
+         inkscape:export-filename="C:\Code\days-ago\banner920x680.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         transform="matrix(0,1,-1,0,0,0)" />
+      <g
+         id="g3201"
+         transform="matrix(0.85923427,0,0,0.85923427,-1630.0098,1358.6151)">
+        <text
+           xml:space="preserve"
+           style="font-size:36.08533096px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
+           x="1077.4692"
+           y="377.85504"
+           id="text3203"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3205"
+             x="1077.4692"
+             y="377.85504"
+             style="font-size:101.03892517px;font-weight:bold;-inkscape-font-specification:Aller Bold">DaysAgo</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:36.88588715px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
+           x="1081.9823"
+           y="449.61728"
+           id="text3207"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3209"
+             x="1081.9823"
+             y="449.61728">minimalist task tracking</tspan></text>
+        <g
+           transform="matrix(0.844094,0,0,0.844094,1138.9511,114.00756)"
+           id="g3211">
+          <rect
+             style="fill:#ff6f00;fill-opacity:1;stroke:none"
+             id="rect3213"
+             width="281.138"
+             height="281.138"
+             x="25.3759"
+             y="-186.13934"
+             inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+             inkscape:export-xdpi="41.142857"
+             inkscape:export-ydpi="41.142857" />
+          <rect
+             style="fill:#d9005b;fill-opacity:1;stroke:none"
+             id="rect3215"
+             width="196.9516"
+             height="203.8723"
+             x="25.3759"
+             y="-185.00134"
+             inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+             inkscape:export-xdpi="41.142857"
+             inkscape:export-ydpi="41.142857" />
+          <rect
+             y="21.898756"
+             x="25.3759"
+             height="73.099899"
+             width="280.72092"
+             id="rect3217"
+             style="fill:#76af2c;fill-opacity:1;stroke:none"
+             inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+             inkscape:export-xdpi="41.142857"
+             inkscape:export-ydpi="41.142857" />
+          <rect
+             y="21.941267"
+             x="25.3759"
+             height="73.057388"
+             width="196.41858"
+             id="rect3219"
+             style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
+             inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+             inkscape:export-xdpi="41.142857"
+             inkscape:export-ydpi="41.142857" />
+          <text
+             inkscape:export-ydpi="41.142857"
+             inkscape:export-xdpi="41.142857"
+             inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+             sodipodi:linespacing="125%"
+             id="text3221"
+             y="-46.885792"
+             x="46.198349"
+             style="font-size:100.40029144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monda;-inkscape-font-specification:Monda Bold"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:Monda;-inkscape-font-specification:Monda Bold"
+               y="-46.885792"
+               x="46.198349"
+               id="tspan3223"
+               sodipodi:role="line"
+               dx="0"
+               dy="0">DA</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g3297"
+       inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <rect
          y="416.37866"
          x="-13.8414"
@@ -366,7 +599,6 @@
          inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
          inkscape:export-xdpi="41.142857"
          inkscape:export-ydpi="41.142857" />
-=======
        id="g4162"
        inkscape:export-filename="C:\Code\days-ago\banner440x280.png"
        inkscape:export-xdpi="45"
@@ -486,6 +718,15 @@
       <g
          id="g3281"
          transform="matrix(0.34146931,0,0,0.34146931,-1060.7598,819.37103)"
+         y="892.06555"
+         x="-1109.6189"
+         height="128"
+         width="128"
+         id="rect3295"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <g
+         id="g3281"
+         transform="matrix(0.34146931,0,0,0.34146931,-1102.284,971.62643)"
          inkscape:export-filename="C:\Code\days-ago\icon48.png"
          inkscape:export-xdpi="15.37"
          inkscape:export-ydpi="15.37">
@@ -547,7 +788,6 @@
              y="-46.885792"
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:Monda;-inkscape-font-specification:Monda Bold">DA</tspan></text>
       </g>
->>>>>>> Stashed changes
     </g>
     <g
        id="g4134"
