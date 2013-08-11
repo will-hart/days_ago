@@ -111,7 +111,7 @@ function draw_grid(data, element, draw_grid) {
     clearTimeout(timeout_id);
     timeout_id = -1;
   }
-
+  
   // clear the element
   element.html("");
 
@@ -282,7 +282,9 @@ function load_tasks() {
 
     }
     trigger_draw_grid();
-    $("p#welcome-message").delay(800).fadeIn('slow');
+    if (tasks.data.length == 0) {
+        $("p#welcome-message").delay(800).fadeIn('slow');
+    }
   });
 }
 

@@ -1,15 +1,19 @@
-body { background: #141414; }
+html, body { background: #141414; font-family: 'Monda', sans-serif; }
 
 /* admin styles */
 p#welcome-message {
     position:fixed; 
-    top: 40%; 
+    top: 25%; 
     width: 100%; 
     text-align:center;
     display:block; 
     color: white; 
-    font-size: 2em;
+    font-size: 1.5em;
     display:none;
+}
+
+p#welcome-message img {
+    margin-bottom: 2em;
 }
 
 p#welcome-message a, p#welcome-message a:visited {
