@@ -40,7 +40,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.43348215"
-     inkscape:cx="488.76064"
+     inkscape:cx="213.08608"
      inkscape:cy="192.73291"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -67,91 +67,79 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-772.36218)">
-    <rect
-       style="fill:#d9005b;fill-opacity:1;stroke:none"
-       id="rect2985"
-       width="280"
-       height="280"
-       x="0"
-       y="772.36218"
-       inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-       inkscape:export-xdpi="30.857143"
-       inkscape:export-ydpi="30.857143" />
-    <rect
-       style="fill:#ff6f00;fill-opacity:1;stroke:none"
-       id="rect3757"
-       width="235"
-       height="235"
-       x="0"
-       y="817.36218"
-       inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-       inkscape:export-xdpi="30.857143"
-       inkscape:export-ydpi="30.857143" />
-    <rect
-       y="867.36218"
-       x="0"
-       height="185"
-       width="185"
-       id="rect3759"
-       style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
-       inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-       inkscape:export-xdpi="30.857143"
-       inkscape:export-ydpi="30.857143" />
-    <rect
-       y="912.36218"
-       x="0"
-       height="140"
-       width="140"
-       id="rect3755"
-       style="fill:#76af2c;fill-opacity:1;stroke:none"
-       inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-       inkscape:export-xdpi="30.857143"
-       inkscape:export-ydpi="30.857143" />
-    <text
-       xml:space="preserve"
-       style="font-size:97.19939423px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
-       x="1.7809607"
-       y="1039.7067"
-       id="text3761"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Code\days-ago-pg\www\res\icon\android\icon-96-xhdpi.png"
-       inkscape:export-xdpi="30.857143"
-       inkscape:export-ydpi="30.857143"><tspan
-         sodipodi:role="line"
-         id="tspan3763"
-         x="1.7809607"
+    <g
+       id="g3037">
+      <rect
+         inkscape:export-ydpi="41.142857"
+         inkscape:export-xdpi="41.142857"
+         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+         y="772.36218"
+         x="0"
+         height="280"
+         width="280"
+         id="rect2985"
+         style="fill:#d9005b;fill-opacity:1;stroke:none" />
+      <rect
+         inkscape:export-ydpi="41.142857"
+         inkscape:export-xdpi="41.142857"
+         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+         y="817.36218"
+         x="0"
+         height="235"
+         width="235"
+         id="rect3757"
+         style="fill:#ff6f00;fill-opacity:1;stroke:none" />
+      <rect
+         inkscape:export-ydpi="41.142857"
+         inkscape:export-xdpi="41.142857"
+         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+         style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
+         id="rect3759"
+         width="185"
+         height="185"
+         x="0"
+         y="867.36218" />
+      <rect
+         inkscape:export-ydpi="41.142857"
+         inkscape:export-xdpi="41.142857"
+         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+         style="fill:#76af2c;fill-opacity:1;stroke:none"
+         id="rect3755"
+         width="140"
+         height="140"
+         x="0"
+         y="912.36218" />
+      <text
+         inkscape:export-ydpi="41.142857"
+         inkscape:export-xdpi="41.142857"
+         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+         sodipodi:linespacing="125%"
+         id="text3761"
          y="1039.7067"
-         style="fill:#ffffff">DA</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:53.63576508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
-       x="362.27432"
-       y="885.44391"
-       id="text3765"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3767"
-         x="362.27432"
-         y="885.44391">Days</tspan><tspan
-         sodipodi:role="line"
-         x="362.27432"
-         y="952.48859"
-         id="tspan3779">Ago</tspan></text>
+         x="1.7809607"
+         style="font-size:97.19939423px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
+         xml:space="preserve"><tspan
+           style="fill:#ffffff"
+           y="1039.7067"
+           x="1.7809607"
+           id="tspan3763"
+           sodipodi:role="line">DA</tspan></text>
+    </g>
     <rect
        style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect3808"
-       width="960"
+       width="1019.9794"
        height="1600"
-       x="543.46411"
+       x="483.48471"
        y="-2140"
-       inkscape:export-filename="C:\Code\days-ago-pg\www\res\screen\android\screen-hdpi-landscape.png"
-       inkscape:export-xdpi="45"
-       inkscape:export-ydpi="45"
+       inkscape:export-filename="C:\Code\days-ago\banner.png"
+       inkscape:export-xdpi="24.75"
+       inkscape:export-ydpi="24.75"
        transform="matrix(0,1,-1,0,0,0)" />
     <g
        id="g3828"
-       transform="matrix(0.82566252,0,0,0.82566252,36.202655,-249.58496)"
-       inkscape:export-filename="C:\Code\days-ago-pg\www\res\screen\android\screen-xhdpi-landscape.png"
+       transform="matrix(0.82566252,0,0,0.82566252,-9.9353463,-311.87126)"
+       inkscape:export-filename="C:\Code\days-ago\img\logo.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <g
@@ -238,7 +226,7 @@
            sodipodi:role="line">minimalist task tracking</tspan></text>
     </g>
     <g
-       transform="translate(-224.12442,392.40622)"
+       transform="translate(-224.12442,362.41651)"
        id="g3841"
        inkscape:export-filename="C:\Code\days-ago-pg\www\res\screen\android\screen-hdpi-landscape.png"
        inkscape:export-xdpi="90"
@@ -325,6 +313,52 @@
            id="tspan3863"
            x="1322.4745"
            y="922.27576">minimalist task tracking</tspan></text>
+    </g>
+    <g
+       id="g3031"
+       inkscape:export-filename="C:\Code\days-ago\icon16.png"
+       inkscape:export-xdpi="5.1428571"
+       inkscape:export-ydpi="5.1428571">
+      <rect
+         style="fill:#d9005b;fill-opacity:1;stroke:none"
+         id="rect3019"
+         width="280"
+         height="280"
+         x="-13.8414"
+         y="276.37866"
+         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+         inkscape:export-xdpi="41.142857"
+         inkscape:export-ydpi="41.142857" />
+      <rect
+         style="fill:#ff6f00;fill-opacity:1;stroke:none"
+         id="rect3021"
+         width="235"
+         height="235"
+         x="-13.8414"
+         y="321.37866"
+         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+         inkscape:export-xdpi="41.142857"
+         inkscape:export-ydpi="41.142857" />
+      <rect
+         y="371.37866"
+         x="-13.8414"
+         height="185"
+         width="185"
+         id="rect3023"
+         style="fill:#028e9f;fill-opacity:0.94117647;stroke:none"
+         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+         inkscape:export-xdpi="41.142857"
+         inkscape:export-ydpi="41.142857" />
+      <rect
+         y="416.37866"
+         x="-13.8414"
+         height="140"
+         width="140"
+         id="rect3025"
+         style="fill:#76af2c;fill-opacity:1;stroke:none"
+         inkscape:export-filename="C:\Code\days-ago\icon_webstore.png"
+         inkscape:export-xdpi="41.142857"
+         inkscape:export-ydpi="41.142857" />
     </g>
   </g>
 </svg>
