@@ -1,15 +1,32 @@
-body { background: #141414; }
+@font-face {
+  font-family: 'Monda';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monda Regular'), local('Monda-Regular'), url(sk05J8GA1NvUxDnk43EgAQ.woff) format('woff');
+}
+@font-face {
+  font-family: 'Monda';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Monda Bold'), local('Monda-Bold'), url(uCFS-jQepl-zVlhjycME2fesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+html, body { background: #141414; font-family: 'Monda', sans-serif; }
 
 /* admin styles */
 p#welcome-message {
     position:fixed; 
-    top: 40%; 
+    top: 25%; 
     width: 100%; 
     text-align:center;
     display:block; 
     color: white; 
-    font-size: 2em;
+    font-size: 1.5em;
     display:none;
+}
+
+p#welcome-message img {
+    margin-bottom: 2em;
 }
 
 p#welcome-message a, p#welcome-message a:visited {
@@ -53,10 +70,10 @@ p#welcome-message a, p#welcome-message a:visited {
     cursor: pointer;
 }
 
-.pink { background: #F5038C; }
-.blue { background: #447BD4; }
-.green { background: #37DE6A; }
-.yellow { background: #D8BE36; }
+.pink { background: #D9005B; }
+.blue { background: #028E9B; }
+.green { background: #76AF2C; }
+.yellow { background: #FF6F00; }
 .multi { text-align: center; color: white; border: 1px solid white; }
 
 #form-container input {
@@ -119,15 +136,16 @@ input.error, #input-errors {
 .grid-date {
     font-weight: bolder;
     color: white;
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 2.3em;
+    margin: 0 0 10px 0;
+    padding:0;
 }
 
 .grid-title {
-    font-style: italic;
     color: white;
     font-size: 1.1em;
     margin-top: 0;
+    padding:0;
 }
 
 .unknown {
@@ -200,6 +218,7 @@ input.error, #input-errors {
     left: 0;
     height: 31%;
     z-index: 1;
+    font-size: 0.9em;
 }
 
 .bottom-row-two {
