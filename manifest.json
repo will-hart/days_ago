@@ -1,7 +1,7 @@
 {
     "name": "Days Ago",
     "description": "Minimalist task tracking",
-    "version": "0.1.5",
+    "version": "0.1.4",
     "permissions": [
         "storage"
     ],
