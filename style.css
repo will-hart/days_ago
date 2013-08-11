@@ -136,14 +136,16 @@ input.error, #input-errors {
 .grid-date {
     font-weight: bolder;
     color: white;
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 2.3em;
+    margin: 0 0 10px 0;
+    padding:0;
 }
 
 .grid-title {
     color: white;
     font-size: 1.1em;
     margin-top: 0;
+    padding:0;
 }
 
 .unknown {
@@ -216,6 +218,7 @@ input.error, #input-errors {
     left: 0;
     height: 31%;
     z-index: 1;
+    font-size: 0.9em;
 }
 
 .bottom-row-two {
