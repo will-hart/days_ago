@@ -29,6 +29,10 @@ This software is released under an MIT license.
 Changes
 -------
 
+**0.1.4**
+ - `UPDATE` Update logo and images
+ - `FIX` Fix an issue with task dashboard hiding some items
+
 **0.1.3**
 
  - `NEW` A whole host of new command types - e.g. "by", "at", days of week, etc. Coming from the mobile app developed for the [Kii Challenge](http://kii.challengepost.com/submissions/16763-daysago).
