@@ -154,7 +154,7 @@ function draw_grid(data, element, draw_grid) {
 
     // set up the styles
     elem.attr("class", classNames);
-    elem.html(get_inner_grid_html(not_done[i]));
+    elem.html(get_inner_grid_html(not_done[i], !draw_grid));
     elem.data('index', i);
     elem.css("backgroundColor", current_colour);
 
@@ -177,10 +177,10 @@ function draw_grid(data, element, draw_grid) {
 /** 
  * Return HTML for displaying a task inside the main container
  */
-function get_inner_grid_html(grid_obj) {
+function get_inner_grid_html(grid_obj, list) {
   var html = "<div class=\"grid-wrapper\"><div class=\"grid-inner\">";
-  html += "<p class=\"grid-date\">" + grid_obj.due_date.fromNow() + "</p>";
-  html += "<p class=\"grid-title\">" + grid_obj.title + "</p>";
+  html += "<p class=\"grid-date\">" + (list ? grid_obj.title : grid_obj.due_date.fromNow()) + "</p>";
+  html += "<p class=\"grid-title\">" + (list ? grid_obj.due_date.fromNow() : grid_obj.title) + "</p>";
   html += "</div></div>";
   return html;
 }
