@@ -188,56 +188,137 @@ function get_inner_grid_html(grid_obj) {
 /** 
  * parse a task string such as "write a book in 6 days" or "write a book on 2012-12-15"
  */
-function parse_task(task_string) {
-  var parts = task_string.split(" in "),
-    date_parts = parts.pop().split(" "),
-    task_name = "",
-    task_date = moment();
+function parse_task(taskString) {
+  console.log("Parsing: " + taskString);
 
-  parse_error = "";
+    var taskName, taskDate, lastCommand, i, idx, tmp, timeCount,
+        lastCommandIdx = -1,
+        commands = [" on ", " in ", " at ", " by ", " tomorrow", " today"],
+        daysOfWeek = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"],
+        unitsOfTime = [
+            "SECOND", "SECONDS", "MINUTE", "MINUTES", "HOUR", "HOURS", "DAY", "DAYS",
+            "WEEK", "WEEKS", "MONTH", "MONTHS", "YEAR", "YEARS"];
 
-  // check for enough arguments
-  if (!parts.length >= 2) {
-    parse_error = "Three items required - e.g. Do a task in 3 days";
-    return false;
-  }
+    // find out which command occurred last
+    for (i = 0; i < commands.length; i += 1) {
+        idx = taskString.lastIndexOf(commands[i]);
 
-  // check the first date part is a number
-  if (!$.isNumeric(date_parts[0])) {
-    parse_error = "Numeric time needed - e.g. '3 days'";
-    return false;
-  }
-
-  // check we have a correctly formatted delta string
-  if (date_parts[1] != "years" && date_parts[1] != "year" && date_parts[1] != "months" && date_parts[1] != "month" && date_parts[1] != "days" && date_parts[1] != "day" && date_parts[1] != "hours" && date_parts[1] != "hour" && date_parts[1] != "minutes" && date_parts[1] != "minute" && date_parts[1] != "seconds" && date_parts[1] != "second") {
-    parse_error = "The date type must be one of 'year', 'month', 'day', 'hour', 'minute' or 'second' with no trailing punctuation";
-    return false;
-  }
-
-
-  // rebuild the task name inserting " in " where it has been removed
-  for (var i = 0; i < parts.length; ++i) {
-    task_name += parts[i];
-    if (i < parts.length - 1) {
-      task_name += " in ";
+        // check if we found a later command
+        if (idx > lastCommandIdx) {
+            lastCommandIdx = idx;
+            lastCommand = commands[i];
+        }
     }
-  }
 
-  // now parse the date
-  task_date = task_date.add(date_parts[1], date_parts[0]);
+    // check if we found a command
+    if (lastCommandIdx === -1) {
+        parse_error = "Unable to find a command - have a look at the hints!";
+        return null;
+    }
 
-  // push the new task
-  var task = {
-    title: task_name,
-    due_date: task_date,
-    done: false
-  };
+    // trim the spaces from the command
+    lastCommand = lastCommand.trim();
 
-  tasks.data.push(task);
-  save_tasks(tasks);
+    // now parse the appropriate command
+    if (lastCommand === "tomorrow" || lastCommand === "today") {
+        taskName = taskString.replace("tomorrow", "").replace("today", "").trim();
 
-  // all done :)
-  return true;
+        if (lastCommand === "tomorrow") {
+            taskDate = moment().hour(17).minute(0).second(0).add('d', 1);
+        } else {
+            taskDate = moment().hour(23).minute(59).second(59);
+        }
+    } else if (lastCommand === "at" || lastCommand === "by") {
+        taskName = taskString.substring(0, lastCommandIdx).trim();
+        tmp = taskString.substring(lastCommandIdx).replace(lastCommand, "").trim().toUpperCase();
+
+        // check for AM or PM
+        if (tmp.indexOf("AM") !== -1) {
+            timeCount = 0;
+        } else if (tmp.indexOf("PM") !== -1) {
+            timeCount = 12;
+        } else {
+            parse_error = "Task includes 'at' but was unable to find AM or PM";
+            return null;
+        }
+
+        // find the hours number and set the date
+        tmp = parseInt(tmp.replace("AM", "").replace("PM", "").trim(), 10);
+        timeCount += tmp;
+        taskDate = moment().hour(timeCount).minute(0).second(0);
+
+        // if it is an "at" command then bubble if required
+        if (lastCommand === "at" && taskDate.isBefore(moment())) {
+            taskDate.add('d', 1);
+        }
+
+    } else if (lastCommand === "in" || lastCommand === "on") {
+        taskName = taskString.substring(0, lastCommandIdx).trim();
+        tmp = taskString.substring(lastCommandIdx).replace(lastCommand, "").trim().toUpperCase();
+        taskDate = moment();
+
+        if (lastCommand === "in") {
+            tmp = tmp.split(" ");
+            if (tmp.length !== 2) {
+                parse_error = "Unable to parse 'in' command, expected it to end with '5 days' or similar, but found " + tmp.join(" ");
+                return null;
+            }
+
+            // sort out the date
+            timeCount = parseInt(tmp[0], 10);
+
+            // check if we have a valid type of time
+            if (unitsOfTime.indexOf(tmp[1]) === -1) {
+                parse_error = "Unable to parse '" + tmp[1] + "', expected 'SECOND', 'MINUTE', 'HOUR', 'DAY', 'WEEK', 'MONTH', 'YEAR'";
+                return null;
+            }
+
+            // convert weeks to days
+            if (tmp[1] === "WEEKS" || tmp[1] === "WEEK") {
+                timeCount *= 7;
+                tmp[1] = "DAYS";
+            }
+
+            taskDate.add(tmp[1].toLowerCase(), timeCount);
+
+        } else {
+            // parse an "on" command
+            timeCount = daysOfWeek.indexOf(tmp);
+
+            // check if we have a valid type of time
+            if (timeCount === -1) {
+                parse_error = "Unable to parse '" + tmp + "', expected a day of the week (e.g. Monday)";
+                return null;
+            }
+
+            // set task to 9am on the given day
+            taskDate.hour(9);
+            taskDate.minute(0);
+            taskDate.second(0);
+            taskDate.day(timeCount);
+
+            // check if we need to bubble up a week
+            if (taskDate.isBefore(moment())) {
+                taskDate.add('d', 7);
+            }
+        }
+    }
+
+    // if we got this far we have populated name and date. Create a new task and return it
+    console.log("Parsed task: '" + taskName + "' at " + taskDate.format(storage_date_format));
+
+    // push the new task
+    var task = {
+        title: taskName,
+        due_date: taskDate,
+        done: false
+    };
+
+    tasks.data.push(task);
+    save_tasks(tasks);
+
+    // all done :)
+    return true;
 }
 
 /**

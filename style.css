@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Monda';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monda Regular'), local('Monda-Regular'), url(sk05J8GA1NvUxDnk43EgAQ.woff) format('woff');
+}
+@font-face {
+  font-family: 'Monda';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Monda Bold'), local('Monda-Bold'), url(uCFS-jQepl-zVlhjycME2fesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
 html, body { background: #141414; font-family: 'Monda', sans-serif; }
 
 /* admin styles */
@@ -128,7 +141,6 @@ input.error, #input-errors {
 }
 
 .grid-title {
-    font-style: italic;
     color: white;
     font-size: 1.1em;
     margin-top: 0;
