@@ -500,7 +500,9 @@ $(document).ready(function() {
     $("#list-container").slideUp('fast');
     $("#view").fadeOut('slow', function() {
       $("#main-container").fadeIn('slow', function() {
-        $("#welcome-message").show();
+        if (tasks.data.length == 0) {
+            $("#welcome-message").show();
+        }
         $("#manage").fadeIn();
       });
     });
