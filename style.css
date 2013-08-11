@@ -53,10 +53,10 @@ p#welcome-message a, p#welcome-message a:visited {
     cursor: pointer;
 }
 
-.pink { background: #F5038C; }
-.blue { background: #447BD4; }
-.green { background: #37DE6A; }
-.yellow { background: #D8BE36; }
+.pink { background: #D9005B; }
+.blue { background: #028E9B; }
+.green { background: #76AF2C; }
+.yellow { background: #FF6F00; }
 .multi { text-align: center; color: white; border: 1px solid white; }
 
 #form-container input {
